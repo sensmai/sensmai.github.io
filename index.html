@@ -26,15 +26,7 @@
 
     <link rel="stylesheet" href="/assets/css/cyan.css">
     <script type="module" src="/assets/js/index.js"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <link rel="preconnect" href="https://challenges.cloudflare.com">
-    <script>
-        let formSubmitted = false;
-
-        function enableSubmit() {
-            document.getElementById('submit-button').disabled = false;
-        }
-    </script>
+    <script>let formSubmitted = false;</script>
 </head>
 <body>
 <header>
@@ -64,9 +56,7 @@
         <label for="entry.839337160">message[*]</label>
         <textarea id="entry.839337160" name="entry.839337160" required></textarea>
 
-        <button id="submit-button"
-                type="submit"
-                disabled>
+        <button type="submit">
             <svg viewBox="0 0 24 24"
                  fill="none"
                  stroke-width="1.5"
@@ -75,12 +65,6 @@
                       d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
         </button>
-
-        <div class="cf-turnstile"
-             data-sitekey="0x4AAAAAACvUMjUVJGRGh-7D"
-             data-theme="dark"
-             data-size="compact"
-             data-callback="enableSubmit"></div>
     </form>
 
     <progress></progress>
